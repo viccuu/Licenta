@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>do Logic</title>
+    <meta charset="utf-8">
+    <link href="css/doLogicstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/interactive_tree.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+
+
+   <!-- <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.2"></script> -->
+    <script type="text/javascript" src="js/validareFormula.js"></script>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <!--<script type="text/javascript" src="js/d3.v3.js"></script> -->
+
+
+</head>
+
+<body >
+
+<section>
+
+    <header>
+        <div id="logo">
+            <img src="images/easyLogic.png" alt="Easy Logic Logo" height="75" width="400">
+        </div>
+        <h1> Can you do the Logic ? </h1>
+    </header>
+
+    <form id="formula" onkeyup="start();" method="post">
+        <p> Formula: <input type="text" name="formula" size="70" maxlength="500"
+                       placeholder="Aici introduceti Formula !" value="" autocomplete="on" autofocus /> </p>
+    </form>
+    <table style="margin-left: 10%; padding-bottom: 1.5%; border-collapse: collapse;">
+        <tr>
+            <td><span style="font-weight: bold;">*</span></td>
+            <td> = and</td>
+        </tr>
+        <tr>
+            <td><span style="font-weight: bold;">+</span></td>
+            <td> = or</td>
+        </tr>
+        <tr>
+            <td><span style="font-weight: bold;">></span>  </td>
+            <td>= implication</td>
+        </tr>
+        <tr>
+            <td><span style="font-weight: bold;">|</span></td>
+            <td>= sheffer</td>
+        </tr>
+        <tr>
+            <td><span style="font-weight: bold;">! </span></td>
+            <td> = not</td>
+        </tr>
+    </table>
+    <p id="FormulaValidaText"  style="margin-left: 20%;"hidden="on"> Formula este </p>
+
+    <div id="containerArbore">
+    </div>
+
+    <table id="tabelAdevar">
+        <thead>
+        </thead>
+    </table>
+    <div id="FormulaInfos">
+        <form>
+            <label style="font-size: 15px;"  for="FNDP">FNDP:</label>
+            <textarea rows="3" cols="20" id="FNDP" style=" background-color: #cccccc" readonly>
+                Forma Normala Disjunctiva Perfecta
+            </textarea>
+            <br/>
+            <label style="font-size: 15px;" for="FNCP">FNCP:</label>
+            <textarea rows="3" cols="20" id="FNCP" style=" background-color: #cccccc" readonly>
+                Forma Normala Conjunctiva Perfecta
+            </textarea>
+            <br/>
+            <label style="font-size: 15px;" for="Par">Parantezare:</label>
+            <input id="Par" style="background-color: #cccccc" type="text" name="formula" size="40" maxlength="500" />
+        </form>
+        <a href="#" class="button big green" onclick="ShowTheTree()">Show me the $<span></span></a>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="js/tree.js"></script>
+<footer>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.
+</footer>
+
+
+</body>
+
+</html>
